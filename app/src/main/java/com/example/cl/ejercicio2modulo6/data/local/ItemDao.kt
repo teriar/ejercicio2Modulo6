@@ -11,5 +11,5 @@ interface ItemDao {
     suspend fun insertItem(item: Item)
 
     @Query("Select * from table_item order by id asc")
-    suspend fun getAllItems():LiveData<List<Item>>
+     fun getAllItems():LiveData<List<Item>>
 }

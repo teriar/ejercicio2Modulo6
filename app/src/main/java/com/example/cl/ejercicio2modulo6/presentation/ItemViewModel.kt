@@ -18,7 +18,7 @@ class ItemViewModel (application: Application) : AndroidViewModel(application) {
             repository = Repository(dao)
         }
 
-         suspend fun getAllItems(): LiveData<List<Item>> = repository.getItems()
+          fun getAllItems(): LiveData<List<Item>> = repository.getItems()
 
         fun insertItem(name: String, price: Int, quantity: Int) = viewModelScope.launch {
             val item = Item(name, price, quantity)
